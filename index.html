@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Nathan Wilkins — Resume</title>
+<style>
+  :root {
+    --navy: #03045E;
+    --mid-navy: #0077B6;
+    --teal: #00B4D8;
+    --light-teal: #90E0EF;
+    --dark-text: #1A1A2E;
+    --grey: #6C757D;
+    --off-white: #F8F9FA;
+  }
+
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+
+  body {
+    font-family: 'Segoe UI', Helvetica, Arial, sans-serif;
+    background: #e9ecef;
+    color: var(--dark-text);
+    min-height: 100vh;
+    padding: 20px;
+  }
+
+  .page {
+    max-width: 960px;
+    margin: 0 auto;
+    background: white;
+    box-shadow: 0 4px 32px rgba(0,0,0,0.18);
+    border-radius: 4px;
+    overflow: hidden;
+  }
+
+  /* ── HEADER ── */
+  .header {
+    background: var(--mid-navy);
+    padding: 28px 36px 22px;
+    border-bottom: 4px solid var(--teal);
+  }
+  .header h1 { font-size: 2.4rem; color: white; letter-spacing: 2px; }
+  .header .tagline { color: var(--light-teal); font-size: 1rem; margin-top: 4px; }
+  .header .contact {
+    margin-top: 10px;
+    display: flex; flex-wrap: wrap; gap: 12px;
+    font-size: 0.85rem; color: #cce8f4;
+  }
+  .header .contact a { color: var(--light-teal); text-decoration: none; }
+  .header .contact a:hover { text-decoration: underline; }
+  .contact-item::before { content: "▸ "; color: var(--teal); }
+
+  /* ── BODY LAYOUT ── */
+  .body { display: flex; }
+
+  /* ── SIDEBAR ── */
+  .sidebar {
+    width: 260px; min-width: 260px;
+    background: var(--navy);
+    color: white;
+    padding: 24px 18px;
+  }
+  .s-section {
+    font-size: 0.7rem; font-weight: bold; letter-spacing: 1.5px;
+    color: var(--teal); text-transform: uppercase;
+    border-bottom: 1px solid #0077B6;
+    padding-bottom: 4px; margin: 18px 0 8px;
+  }
+  .s-section:first-child { margin-top: 0; }
+  .skill-group { margin-bottom: 8px; }
+  .skill-label { font-size: 0.7rem; font-weight: bold; color: var(--light-teal); margin-bottom: 2px; }
+  .skill-val { font-size: 0.72rem; color: #cce8f4; line-height: 1.5; }
+  .edu-block { margin-bottom: 12px; }
+  .edu-degree { font-size: 0.82rem; font-weight: bold; color: white; }
+  .edu-school { font-size: 0.75rem; color: var(--light-teal); font-style: italic; }
+  .edu-year { font-size: 0.7rem; color: var(--grey); }
+  .edu-note { font-size: 0.7rem; color: #adb5bd; line-height: 1.4; margin-top: 2px; }
+
+  /* ── MAIN ── */
+  .main { flex: 1; padding: 24px 28px; }
+  .m-section {
+    font-size: 0.78rem; font-weight: bold; letter-spacing: 1.2px;
+    color: var(--navy); text-transform: uppercase;
+    border-bottom: 2px solid var(--teal);
+    padding-bottom: 4px; margin: 18px 0 10px;
+  }
+  .m-section:first-child { margin-top: 0; }
+
+  .summary { font-size: 0.85rem; line-height: 1.6; color: #333; }
+
+  .proj-block { margin-bottom: 14px; }
+  .proj-title { font-size: 0.9rem; font-weight: bold; color: var(--mid-navy); }
+  .proj-tech { font-size: 0.72rem; color: var(--teal); font-style: italic; margin: 2px 0 5px; }
+  .proj-tech a { color: var(--teal); }
+
+  .bullet { font-size: 0.82rem; line-height: 1.5; padding-left: 14px; position: relative; margin-bottom: 3px; }
+  .bullet::before { content: "•"; color: var(--teal); position: absolute; left: 2px; font-weight: bold; }
+
+  .job-block { margin-bottom: 10px; }
+  .job-title { font-size: 0.85rem; font-weight: bold; color: var(--dark-text); }
+  .job-title span { color: var(--mid-navy); }
+  .job-meta { font-size: 0.75rem; color: var(--grey); font-style: italic; margin: 1px 0 4px; }
+
+  /* ── RESPONSIVE ── */
+  @media (max-width: 680px) {
+    body { padding: 0; }
+    .page { border-radius: 0; box-shadow: none; }
+    .body { flex-direction: column; }
+    .sidebar { width: 100%; min-width: unset; }
+    .header h1 { font-size: 1.7rem; }
+    .header .contact { flex-direction: column; gap: 4px; }
+  }
+
+  @media print {
+    body { background: white; padding: 0; }
+    .page { box-shadow: none; max-width: 100%; }
+  }
+</style>
+</head>
+<body>
+<div class="page">
+
+  <!-- HEADER -->
+  <div class="header">
+    <h1>NATHAN WILKINS</h1>
+    <div class="tagline">Software Developer &nbsp;·&nbsp; Neuroscience Researcher &nbsp;·&nbsp; AI/ML Engineer</div>
+    <div class="contact">
+      <span class="contact-item">nathanalexander1995@gmail.com</span>
+      <span class="contact-item">657-657-2051</span>
+      <span class="contact-item">McComb, MS 39648</span>
+      <span class="contact-item"><a href="https://github.com/nathan-wilkins95" target="_blank">github.com/nathan-wilkins95</a></span>
+    </div>
+  </div>
+
+  <div class="body">
+
+    <!-- SIDEBAR -->
+    <div class="sidebar">
+
+      <div class="s-section">Skills</div>
+      <div class="skill-group">
+        <div class="skill-label">Languages</div>
+        <div class="skill-val">Python · MATLAB · SQL · Bash</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">AI / ML</div>
+        <div class="skill-val">Whisper AI · DDPG · Keras · TensorFlow · CUDA</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Data</div>
+        <div class="skill-val">NumPy · Pandas · Matplotlib · SQLite · SciPy</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Dev Tools</div>
+        <div class="skill-val">Git · Linux · PyInstaller · PyAudio · tkinter</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Neuroscience</div>
+        <div class="skill-val">EEG · fMRI · OpenSim · Computational Modeling</div>
+      </div>
+      <div class="skill-group">
+        <div class="skill-label">Research</div>
+        <div class="skill-val">Experimental Design · Scientific Writing · LaTeX</div>
+      </div>
+
+      <div class="s-section">Education</div>
+      <div class="edu-block">
+        <div class="edu-degree">M.S. Neuroscience</div>
+        <div class="edu-school">Maastricht University</div>
+        <div class="edu-year">Feb 2024</div>
+        <div class="edu-note">Thesis: Ia Afferents on Spinal Cord via RL · fMRI · EEG · Sensorimotor</div>
+      </div>
+      <div class="edu-block">
+        <div class="edu-degree">B.S. Psychology</div>
+        <div class="edu-school">William Carey University</div>
+        <div class="edu-year">2018 · Cum Laude · GPA 3.6</div>
+        <div class="edu-note">Minors: Biology, Criminal Justice · Alpha Psi Omega</div>
+      </div>
+
+    </div>
+
+    <!-- MAIN CONTENT -->
+    <div class="main">
+
+      <div class="m-section">Professional Summary</div>
+      <p class="summary">Research-driven software developer with an M.S. in Neuroscience and hands-on experience building production AI applications and computational neuroscience tools. Combines a scientific foundation in neuroimaging and statistical modeling with practical Python engineering — including speech-to-text AI, reinforcement learning, GPU-accelerated inference, and full desktop application development. Proven across interdisciplinary and multicultural environments with a track record of delivering documented, tested software.</p>
+
+      <div class="m-section">Technical Projects</div>
+
+      <div class="proj-block">
+        <div class="proj-title">VoxChart — Medical Speech-to-Text Dictation App</div>
+        <div class="proj-tech">Python · Whisper AI · PyAudio · tkinter · SQLite · PyInstaller &nbsp;|&nbsp;
+          <a href="https://github.com/nathan-wilkins95/VoxChart" target="_blank">github.com/nathan-wilkins95/VoxChart</a>
+        </div>
+        <div class="bullet">Built clinical desktop dictation app with offline Whisper AI speech recognition on NVIDIA GPU hardware</div>
+        <div class="bullet">Developed medical post-processor + SQLite terminology DB to auto-correct drug names and anatomical terms</div>
+        <div class="bullet">Architected 20+ modules: autosave, Epic EHR export, crash reporting, and Windows installer pipeline</div>
+      </div>
+
+      <div class="proj-block">
+        <div class="proj-title">Spinal Cord Arm RL Model — Neuroscience Research</div>
+        <div class="proj-tech">Python · Keras · TensorFlow · keras-rl · OpenSim · DDPG &nbsp;|&nbsp;
+          <a href="https://github.com/nathan-wilkins95/osim-rl-spinal-cord-arm-project" target="_blank">github.com/nathan-wilkins95/osim-rl-spinal-cord-arm-project</a>
+        </div>
+        <div class="bullet">Extended M.S. thesis into open-source codebase: DDPG agent controlling 6-muscle, 2-DOF arm in OpenSim</div>
+        <div class="bullet">Implemented Prochazka Ia afferent model with reciprocal inhibition matrix to gate motor neuron output</div>
+        <div class="bullet">Designed 4-component shaped reward (distance, effort, smoothness, ROM) to eliminate co-contraction; added CCI metrics</div>
+      </div>
+
+      <div class="m-section">Work History</div>
+
+      <div class="job-block">
+        <div class="job-title">Assistant Store Manager <span>|</span> Aldi USA</div>
+        <div class="job-meta">Brookhaven, MS &nbsp;·&nbsp; May 2025 – Present</div>
+        <div class="bullet">Managed store operations, staff mentoring, opening/closing procedures, and merchandising strategy</div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-title">Research Assistant Intern <span>|</span> University of Maastricht</div>
+        <div class="job-meta">Netherlands &nbsp;·&nbsp; Apr 2023 – Feb 2024</div>
+        <div class="bullet">Designed cognitive neuroscience protocols; analyzed data with Python/MATLAB; prepared findings for publication</div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-title">Lead Bartender <span>|</span> Shamrock Irish Pub</div>
+        <div class="job-meta">Maastricht, Netherlands &nbsp;·&nbsp; Jan 2023 – Feb 2025</div>
+        <div class="bullet">Supervised bar staff; managed cash reconciliation in a high-volume international environment</div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-title">ESL Lead Teacher <span>|</span> Busan Global Village</div>
+        <div class="job-meta">Busan, South Korea &nbsp;·&nbsp; Jul 2020 – Jun 2022</div>
+        <div class="bullet">Led ESL team; developed curriculum and assessments; ran professional development for teaching staff</div>
+      </div>
+
+      <div class="job-block">
+        <div class="job-title">ESL Teacher <span>|</span> Francis Parker Collegiate</div>
+        <div class="job-meta">Pyeongtaek, South Korea &nbsp;·&nbsp; Jun 2019 – Jul 2020</div>
+        <div class="bullet">Designed tailored lesson plans; boosted student engagement through interactive interdisciplinary activities</div>
+      </div>
+
+    </div>
+  </div>
+</div>
+</body>
+</html>
